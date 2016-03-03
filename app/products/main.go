@@ -20,7 +20,7 @@ func main() {
 	e := echo.New()
 	e.Use(mw.Logger())
 	e.Get("/", getProducts)
-	e.Run(":1234")
+	e.Run(":8000")
 }
 
 func getProducts(c *echo.Context) error {
