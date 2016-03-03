@@ -9,9 +9,9 @@ import (
 	mw "github.com/labstack/echo/middleware"
 )
 
-var svcId = newSvcId()
+var replicaId = newReplicaId()
 
-func newSvcId() int {
+func newReplicaId() int {
 	rand.Seed(time.Now().UnixNano())
 	return rand.Intn(1000)
 }
@@ -26,11 +26,11 @@ func main() {
 func getProducts(c *echo.Context) error {
 	return c.JSON(http.StatusOK, ProductsResp{
 		Products: []string{"apple", "banana"},
-		SvcId:    svcId,
+		Replica:  replicaId,
 	})
 }
 
 type ProductsResp struct {
 	Products []string `json:"products"`
-	SvcId    int      `json:"svcId"`
+	Replica  int      `json:"_replica"`
 }
