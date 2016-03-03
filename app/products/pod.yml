@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: products
+spec:
+  containers:
+  - name: products
+    image: k8s-hands-on/products:v1
+    ports:
+    - containerPort: 8000
