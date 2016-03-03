@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: httpie
+spec:
+  containers:
+  - name: httpie
+    image: clue/httpie
+    command:
+      - sleep
+      - "3600"
