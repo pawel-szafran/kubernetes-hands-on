@@ -37,9 +37,9 @@ Install k8s:
 cd k8s-on-docker
 docker-compose up -d
 ./tunnel-apiserver.sh  # For Docker on VM
-./enable-dns.sh
 # Install kubernetes-cli (kubectl). For Mac:
 brew install kubernetes-cli  # brewi if you use Prezto
+./enable-dns.sh
 ```
 
 Play with k8s:
